@@ -20,31 +20,31 @@ const StyledGroup = styled.div`
 `;
 
 function App() {
-  const [sqrtArg, setSqrtArg] = useState(2);
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const {currentTarget} = event;
-    setSqrtArg(currentTarget.value as unknown as number);
-  };
+    const [sqrtArg, setSqrtArg] = useState(2);
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const {currentTarget} = event;
+        setSqrtArg(currentTarget.value as unknown as number);
+    };
 
-  return (
-      <StyledApp>
-        <h2>Demo</h2>
-        <p>A simple Create React App created directly in TypeScript. We added
-            styled components and a local square root typescript function.
-          <ul>
-            <li>React is release 18.2</li>
-            <li>Styled components added v 6.0.6</li>
-          </ul>
-        </p>
-        <StyledGroup>
-          <label>
-            arg:&nbsp;
-            <input type="number" value={sqrtArg} onChange={handleChange}/>
-          </label>
-          <div>sqrt(arg) = {sqrt(sqrtArg)}</div>
-        </StyledGroup>
-      </StyledApp>
-  );
+    return (
+        <StyledApp>
+            <h2>Demo</h2>
+            <p>A simple Create React App created directly in TypeScript. We added
+                styled components and a local square root typescript function.
+            </p>
+            <ul>
+                <li>React is release 18.2</li>
+                <li>Styled components added v 6.0.6</li>
+            </ul>
+            <StyledGroup>
+                <label>
+                    arg:&nbsp;
+                    <input type="number" value={sqrtArg} onChange={handleChange} autoFocus={true} />
+                </label>
+                <div>sqrt(arg) = {sqrt(sqrtArg)}</div>
+            </StyledGroup>
+        </StyledApp>
+    );
 }
 
 export default App;
